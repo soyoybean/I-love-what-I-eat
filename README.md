@@ -29,6 +29,10 @@ The biggest problems are that
 2. Even if they do, they have to overcome a massive gap in the support 
 available in order to fully recover.
 
+Apps to checkout:
+- RR: Eating Disorder Management
+- ANAD
+
 Ideas:
 - Eating reminder (eat three proper meals)
 - I hope you look forward to the day you can confidently delete this app, and
