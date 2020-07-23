@@ -30,6 +30,7 @@ The biggest problems are that
 available in order to fully recover.
 
 Ideas:
+- Eating reminder (eat three proper meals)
 - I hope you look forward to the day you can confidently delete this app, and
 go live your life without thinking about the bad times.
 - Choose a flavor/food you're craving and recommend dishes you can make/order
