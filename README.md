@@ -1,6 +1,6 @@
 # I love what I eat
 
-An app to help people who had/have issues with eating disorders to entirely love themselves and what they eat.
+An app to help people who had/have issues with eating disorders to develop/settle with a personalized, healthy meal plan.
 
 ## Project Status
 Development in process and ongoing.
