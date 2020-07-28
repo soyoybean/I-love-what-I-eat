@@ -8,17 +8,8 @@ Development in process and ongoing.
 ## Installation
 
 ## The Motivation
-Dear Helena,
-
-I hope this app can help you. You're the best foodie friend I ever had and ever will, so have pride
-in your taste of food and love yourself. 
-I hope by the time you get this app on your phone we already have lots of more memories making/eating
-good food.
-Sorry for being an imperfect human being, and I love you.
-
-Best,
-your one and only little sister
-Soyon Kim
+Seeing my friends/ family members struggle with eating disorders, I wanted to help them by developing an app
+that would help them maintain a healthy eating habit not by themselves, but with people around them who can support their journey.
 
 ## Research
 
