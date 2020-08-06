@@ -35,6 +35,14 @@ go live your life without thinking about the bad times.
 - Food blog/vlog 
 - Depending on user's mood, bot says "hey, what's up?" in a different tone.
 
+- [ ] journalize what you ate
+- [ ] write on dashboard what you want to eat/bake/cook in the future
+- [ ] journalize family/friend's reaction eating food together
+
+- 로그인 후, 다른 유저와 추가하기
+- 먹고 싶은 것 보드에 받아적기 -> automated google search 통해서 재료 적어
+- 일주일에 먹을 디저트 양, 하루에 먹을 식사 양 정해놓기. 보드에서 그 수를 넘어가면 다음주에 먹는걸로 넘어감.
+
 ## Storyboard
 
 ## Prototyping (Low-fidelity, mood board, high-fidelity)

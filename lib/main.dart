@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:url_launcher/url_launcher.dart';
+import 'package:geolocator/geolocator.dart';
 import 'dart:async';
 
 void main() => runApp(MyApp());
@@ -38,6 +39,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
+  Position _currentPosition;
+  String _currentAddress;
 
   void _incrementCounter() async {
     // open link
@@ -137,12 +141,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have been in touch with your counselor this many times',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display2,
+            if (_currentPosition != null) Text(_currentAddress),
+            FlatButton(
+              child: Text("Get location"),
+              onPressed: () {
+                _getCurrentLocation();
+              },
             ),
           ],
         ),
@@ -153,6 +157,36 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Icon(Icons.call),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  _getCurrentLocation() {
+    geolocator
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
+        .then((Position position) {
+      setState(() {
+        _currentPosition = position;
+      });
+
+      _getAddressFromLatLng();
+    }).catchError((e) {
+      print(e);
+    });
+  }
+
+  _getAddressFromLatLng() async {
+    try {
+      List<Placemark> p = await geolocator.placemarkFromCoordinates(
+          _currentPosition.latitude, _currentPosition.longitude);
+
+      Placemark place = p[0];
+
+      setState(() {
+        _currentAddress =
+            "${place.locality}, ${place.postalCode}, ${place.country}";
+      });
+    } catch (e) {
+      print(e);
+    }
   }
 }
 
